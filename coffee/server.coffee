@@ -132,7 +132,7 @@ socket.on 'connection', (client) ->
       if pieces[0] is 'cd'
         try
           process.chdir(command_cwd)
-          command_cwd = fs.realpathSync(pieces[1])
+          command_cwd = fs.realpathSync(if pieces.length > 1 then pieces[1] else process.env.HOME)
           client.send(JSON.stringify({ 'cwd': command_cwd }))
         catch error
           client.send(JSON.stringify({ 'error': error.toString(), 'cwd': command_cwd }))
