@@ -10,7 +10,7 @@ window.onload = ->
 
   # initialize html5 websockets client
   socket = new io.Socket(location.hostname, { transports : ['websocket'] })
-  socket.connect();
+  socket.connect()
 
   # update status of connection
   socket.on 'connect', ->
@@ -43,7 +43,7 @@ window.onload = ->
 
     # clear the output if clear response
     $history.innerHTML = '' if message.output is '[H[2J'
-    
+
     # scroll to the bottom of the history
     $history.scrollTop = $history.scrollHeight
 
