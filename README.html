@@ -1,0 +1,51 @@
+<h1><a href="https://github.com/ikarosdaedalos/terminal">Terminal</a></h1>
+
+<p>Simple web-based terminal front-end using node.js and socket.io for a school assignment.</p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>git</li>
+<li><a href="http://nodejs.org/">node.js</a></li>
+<li><a href="http://socket.io/">socket.io</a></li>
+<li>websockets-enabled browser (Chrome, Chromium, maybe Firefox 4 or IE9)</li>
+</ul>
+
+<p>This has only been tested on Ubuntu+Chromium and OSX+Chrome. It may work under other operating systems (Windows, etc.) or in other browsers (Firefox, Safari, etc.)
+It definitely will not work in IE6 - IE8 (it may work in IE9).</p>
+
+<h2>Installation</h2>
+
+<h3>install git</h3>
+
+<ol>
+<li><code>sudo apt-get -y install git-core gitosis</code></li>
+</ol>
+
+<h3>install <a href="http://nodejs.org/#download">node.js</a></h3>
+
+<ol>
+<li><code>git clone git://github.com/joyent/node.git</code></li>
+<li><code>cd node # or whatever the folder is called that was downloaded</code></li>
+<li><code>./configure</code></li>
+<li><code>make</code></li>
+<li><code>make install</code></li>
+</ol>
+
+<h3>install <a href="http://npmjs.org/" title="node package manager">npm</a> (<a href="https://github.com/isaacs/npm">instructions on github</a>)</h3>
+
+<ol>
+<li><code>curl http://npmjs.org/install.sh | sh</code></li>
+</ol>
+
+<h3>install <a href="http://socket.io/">socket.io</a></h3>
+
+<ol>
+<li><code>npm install socket.io</code></li>
+</ol>
+
+<h3>run</h3>
+
+<ol>
+<li><code>node lib/server.js # from within terminal folder</code></li>
+</ol>

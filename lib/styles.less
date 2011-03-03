@@ -30,28 +30,25 @@ aside#status {
   padding: 4px;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
-}
-aside#status > #current-status {
-  background: #888;
-  /* #888, def, fa4 */
-
-  width: 4px;
-  height: 100%;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 8px rgba(96, 128, 255, 0.6);
-  -webkit-transition: background 0.5s ease-in-out, -webkit-box-shadow 0.5s ease-in-out;
-}
-aside#status > #current-status.connected {
-  background: #def;
-  /* #888, def, fa4 */
-
-  -webkit-box-shadow: 0 0 8px rgba(96, 128, 255, 0.6);
-}
-aside#status > #current-status.error {
-  background: #f86;
-  /* #888, def, fa4 */
-
-  -webkit-box-shadow: 0 0 8px rgba(255, 128, 96, 0.6);
+  
+  > #current-status {
+    background: #888; /* #888, def, fa4 */
+    width: 4px;
+    height: 100%;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 8px rgba(96, 128, 255, 0.6);
+    -webkit-transition: background 0.5s ease-in-out,
+                        -webkit-box-shadow 0.5s ease-in-out;
+                        
+    &.connected {
+      background: #def; /* #888, def, fa4 */
+      -webkit-box-shadow: 0 0 8px rgba(96, 128, 255, 0.6);
+    }
+    &.error {
+      background: #f86; /* #888, def, fa4 */
+      -webkit-box-shadow: 0 0 8px rgba(255, 128, 96, 0.6);
+    }
+  }
 }
 .container {
   background: #3c3c3c;
@@ -59,14 +56,15 @@ aside#status > #current-status.error {
   margin: 4px;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
-}
-.container > .content {
-  background: #444;
-  border: 1px solid #4c4c4c;
-  margin: 4px;
-  padding: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  
+  > .content {
+    background: #444;
+    border: 1px solid #4c4c4c;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
 }
 #history {
   position: fixed;
@@ -78,15 +76,15 @@ aside#status > #current-status.error {
   padding: 8px;
   white-space: pre;
   overflow: auto;
-}
-#history .command {
-  color: #888;
-}
-#history .error {
-  color: #f86;
-  /* #888, def, fa4 */
-
-  text-shadow: 0 0 8px rgba(255, 128, 96, 0.6);
+  
+  .command {
+    color: #888;
+  }
+  
+  .error {
+    color: #f86; /* #888, def, fa4 */
+    text-shadow: 0 0 8px rgba(255, 128, 96, 0.6);
+  }
 }
 #commands {
   position: fixed;
@@ -104,9 +102,10 @@ input#command-line {
   color: #def;
   font-family: 'Droid Sans Mono', Monaco, monospace;
   text-shadow: 0 0 4px rgba(96, 128, 255, 0.4);
-}
-input#command-line:focus {
-  outline: none;
+  
+  &:focus {
+    outline: none;
+  }
 }
 #cwd {
   color: #282828;
